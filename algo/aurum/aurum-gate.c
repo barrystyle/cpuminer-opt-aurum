@@ -53,6 +53,7 @@ bool register_aurum_algo(algo_gate_t* gate)
     gate->hash     = (void*)&aurum_hash;
     gate->scanhash = (void*)&scanhash_aurum;
     opt_target_factor = 4096.0;
+    gate->optimizations = AES_OPT | AVX2_OPT | AVX512_OPT;
 
     return true;
 }
